@@ -1,0 +1,22 @@
+{
+	"name": "car-alarm-vision",
+	"version": "1.0.0",
+	"description": "Car alarm key fob tracking system (OpenCV)",
+	"private": true,
+	"author": "dpavlovspace <dmitrypavlov.design@gmail.com> (Dmitry Pavlov)",
+	"license": "MIT",
+	"scripts": {
+		"start": "concurrently \"cd ./client && yarn start\" \"cd ./server && yarn start\"",
+		"dev": "concurrently \"cd ./server && yarn dev\" \"cd ./client && yarn dev\"",
+		"postinstall": "cd ./server && yarn && cd ../client/ && yarn",
+		"reinstall": "rm -rf node_modules && yarn"
+	},
+	"engines": {
+		"node": ">=12",
+		"npm": ">=6.0.0"
+	},
+	"engineStrict": true,
+	"devDependencies": {
+		"concurrently": "^5.3.0"
+	}
+}
